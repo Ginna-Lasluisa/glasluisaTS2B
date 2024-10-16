@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="abustillosT2B.Views.vHome"
+             Title="vHome">
+    <VerticalStackLayout Spacing="25"
+                         Padding="25">
+
+        <Label 
+            Text="Sistema de Calificaciones"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+        <Grid VerticalOptions="Center"
+              HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Parcial 1"
+                   FontSize="20"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   VerticalTextAlignment="Center"/>
+
+            <Label Text="Nombre Estudiante:"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   VerticalTextAlignment="Center"/>
+
+            <Picker x:Name="pkEstudiantes"
+                    Grid.Row="1"
+                    Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Carlos Coveña</x:String>
+                    <x:String>Ginna Lasluisa</x:String>
+                    <x:String>Lucia Noroña</x:String>
+                    <x:String>David Molina</x:String>
+                    <x:String>Dannes Bustillos</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Nota Seguimiento:"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtNotaSeg1"
+                   Placeholder="Ingrese la nota de seguimiento"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   TextChanged="ControlRango"
+                   Keyboard="Numeric"/>
+
+            <Label Text="Nota Examen:"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtNotaExa1"
+                   Placeholder="Ingrese la nota de seguimiento"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   TextChanged="ControlRango"
+                   Keyboard="Numeric"/>
+
+            <Label Text="Nota Parcial 1:"
+                   Grid.Row="4"
+                   Grid.Column="0"
+                   VerticalTextAlignment="Center"/>
+
+            <Label x:Name="lblNotaParcial1"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   VerticalTextAlignment="Center"/>
+
+            <Label Text="Parcial 2"
+                   FontSize="20"
+                   Grid.Row="6"
+                   Grid.Column="0"
+                   VerticalTextAlignment="Center"/>
+
+            <Label Text="Nota Seguimiento:"
+                   Grid.Row="7"
+                   Grid.Column="0"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtNotaSeg2"
+                   Placeholder="Ingrese la nota de seguimiento"
+                   Grid.Row="7"
+                   Grid.Column="1"
+                   TextChanged="ControlRango"
+                   Keyboard="Numeric"/>
+
+            <Label Text="Nota Examen:"
+                   Grid.Row="8"
+                   Grid.Column="0"
+                   VerticalTextAlignment="Center"/>
+
+            <Entry x:Name="txtNotaExa2"
+                   Placeholder="Ingrese la nota de seguimiento"
+                   Grid.Row="8"
+                   Grid.Column="1"
+                   TextChanged="ControlRango"
+                   Keyboard="Numeric"/>
+
+            <Label Text="Nota Parcial 2:"
+                   Grid.Row="9"
+                   Grid.Column="0"
+                   VerticalTextAlignment="Center"/>
+
+            <Label x:Name="lblNotaParcial2"
+                   Grid.Row="9"
+                   Grid.Column="1"
+                   VerticalTextAlignment="Center"/>
+
+            <Label Text="Seleccina la Fecha: "
+                   Grid.Row="11"
+                   Grid.Column="0"
+                   VerticalTextAlignment="Center"/>
+
+            <DatePicker x:Name="dpkFecha"
+                        Date="01/01/2024"
+                        Format="dd/MM/yyyy"
+                        Grid.Row="11"
+                        Grid.Column="1"/>
+
+            <Label Text="Nota Final:"
+                   Grid.Row="13"
+                   Grid.Column="0"
+                   VerticalTextAlignment="Center"/>
+
+            <Label x:Name="lblNotaFinal"
+                   Grid.Row="13"
+                   Grid.Column="1"
+                   VerticalTextAlignment="Center"/>
+        </Grid>
+
+        <Button x:Name="btnCalcular"
+            Text="Calcular Notas del Estudiante"
+            WidthRequest="350"
+            Clicked="btnCalcular_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
