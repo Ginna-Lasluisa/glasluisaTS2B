@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace abustillosT2B.Views;
+namespace glasluisaTS2B.Views;
 
 public partial class vHome : ContentPage
 {
@@ -102,7 +102,7 @@ public partial class vHome : ContentPage
 
         if (!regex.IsMatch(e.NewTextValue))
         {
-            DisplayAlert("Entrada inválida", "Solo se permiten números y comas para numeros decimales", "OK");
+            DisplayAlert("Entrada invÃ¡lida", "Solo se permiten nÃºmeros y comas para numeros decimales", "OK");
             ((Entry)sender).Text = string.Empty;
         }
         else
